@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agile Team Charter | GoShuttle Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand"><div class="nav-logo">GS</div><span>GoShuttle Portfolio</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="charter.html" class="active">Charter</a>
+      <a href="userstories.html">User Stories</a>
+      <a href="backlog.html">Product Backlog</a>
+      <a href="sprint.html">Sprint Backlog</a>
+      <a href="logbook.html">Logbook</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <h1>01 — Agile Team Charter</h1>
+    <p>Our co-created social contract defining shared purpose, values, roles and working agreements for the GoShuttle project.</p>
+    <div class="meta">
+      <span class="badge teal">Evidence</span>
+      <span class="badge teal">Reflection</span>
+      <span class="badge blue">PRP370S</span>
+      <span class="badge amber">Samukelisiwe Maphumulo | 219344639</span>
+    </div>
+  </div>
+
+  <!-- EVIDENCE -->
+  <div class="content-section">
+    <div class="container">
+
+      <div class="block-title">
+        <div class="dot" style="background:var(--teal)"></div>
+        Evidence — Agile Team Charter Document
+      </div>
+
+      <div class="evidence-block">
+        <h3 style="font-size:18px; margin-bottom:6px;">GoShuttle Agile Team Charter</h3>
+        <p style="color:var(--text-sec); font-size:13px; margin-bottom:24px;">Professional Practice 3 &nbsp;|&nbsp; August – October 2026</p>
+
+        <!-- Team Purpose -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:10px;">Team Purpose</h4>
+        <p style="font-size:14px; color:var(--text-sec); margin-bottom:24px; line-height:1.7;">
+          To design, build and deliver a working student shuttle tracking application (GoShuttle) that solves a real transport problem for CPUT commuter students — demonstrating professional Agile collaboration, iterative development and quality-driven delivery throughout the Professional Practice 3 module.
+        </p>
+
+        <!-- Core Values -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:14px;">Core Team Values</h4>
+        <div class="values-grid" style="margin-bottom:24px;">
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h4>Collaboration</h4>
+            <p>We work together across packages — no one is blocked alone</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🔍</div>
+            <h4>Transparency</h4>
+            <p>Progress, blockers and decisions are shared openly on Trello</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⚡</div>
+            <h4>Delivery</h4>
+            <p>We ship working software each sprint — not just documentation</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🔄</div>
+            <h4>Adaptation</h4>
+            <p>We pivot quickly when constraints arise (e.g. hosting change)</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">📚</div>
+            <h4>Learning</h4>
+            <p>Every sprint includes a retrospective to improve our process</p>
+          </div>
+        </div>
+
+        <!-- Roles & Responsibilities -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:14px;">Team Roles &amp; Responsibilities</h4>
+        <table class="data-table" style="margin-bottom:24px;">
+          <thead>
+            <tr>
+              <th>Member</th>
+              <th>Role</th>
+              <th>ERD Package</th>
+              <th>Responsibilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samukelisiwe Maphumulo</td>
+              <td><span class="badge teal">Team Leader / Writer</span></td>
+              <td>Package 1 — Campus &amp; User</td>
+              <td>Agile facilitation, Campus &amp; User tables, RegisterView.vue, Trello management, documentation</td>
+            </tr>
+            <tr>
+              <td>Sinethemba Mkhoma</td>
+              <td><span class="badge blue">Designer</span></td>
+              <td>Package 2 — Routes &amp; Stops</td>
+              <td>Route, Stop, Schedule/Departure tables; seed data G1/G2/G3; UI design &amp; asset export</td>
+            </tr>
+            <tr>
+              <td>Mvuyisi Mcithwa</td>
+              <td><span class="badge amber">Researcher</span></td>
+              <td>Package 3 — Fleet &amp; LiveTrip</td>
+              <td>Bus, Driver, LiveTrip tables; DriverTrack.vue; TrackView.vue Leaflet map; GPS integration</td>
+            </tr>
+            <tr>
+              <td>Kwanda Mbayise</td>
+              <td><span class="badge purple">Presenter</span></td>
+              <td>Package 4 — Pass &amp; Integration</td>
+              <td>Pass table, PassService metrics, cross-package testing, seed data, README, demo prep</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Working Agreements -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:14px;">Working Agreements</h4>
+        <table class="data-table">
+          <thead>
+            <tr><th>#</th><th>Agreement</th><th>How We Enforce It</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Daily standup every morning via WhatsApp — what I did, what I will do, any blockers</td><td>Logbook entry recorded by Team Leader</td></tr>
+            <tr><td>2</td><td>All tasks must be on Trello before coding begins — no shadow work</td><td>Sprint Planning session at start of each sprint</td></tr>
+            <tr><td>3</td><td>Package ordering is strict — Package N+1 cannot start until Package N tables exist</td><td>Team Leader confirms readiness before unlocking next package</td></tr>
+            <tr><td>4</td><td>Every schema change must be announced in the group before being applied to Supabase</td><td>WhatsApp group announcement + Trello comment</td></tr>
+            <tr><td>5</td><td>Sprint retrospective is held at the end of every sprint — minimum 3 items: what went well, what to improve, action item</td><td>Logged in Agile Logbook by Team Leader</td></tr>
+            <tr><td>6</td><td>No member submits work that has not been peer-reviewed by at least one other member</td><td>Pull request or direct message confirmation</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="block-title" style="margin-top:40px;">
+        <div class="dot" style="background:var(--amber)"></div>
+        Reflection — What I Learned from the Team Charter
+      </div>
+
+      <div class="reflection-block">
+        <div class="reflection-text">
+          <p>Before GoShuttle, I thought a team charter was simply a document you fill in at the start of a project and then forget about. My experience in Professional Practice 3 changed that view completely. <strong>The charter became a living reference that we returned to whenever there was disagreement or confusion</strong> — particularly around the strict package ordering rule, which we had to enforce in mid-August when the team was tempted to start Package 3 (LiveTrip) before Package 2 (Routes &amp; Stops) was fully seeded.</p>
+          <p>As Team Leader, co-creating the charter rather than writing it alone taught me the difference between rules that are imposed and rules that are owned. <strong>When the team co-wrote the working agreements, they respected them.</strong> The "package ordering is strict" rule, for example, was Mvuyisi's suggestion — so he was the first to enforce it on himself when he had to wait for Sinethemba's Route table before he could create LiveTrip foreign keys.</p>
+          <p>The core values section was the hardest part to write meaningfully. It is easy to write "Collaboration" as a value, but the charter forced us to define what collaboration actually looks like in practice — which led to the WhatsApp standup rule and the Trello-before-coding agreement. <strong>These operational definitions turned abstract values into daily behaviours</strong>, which is something I will carry into every future project, including my own business projects.</p>
+          <p>If I could improve our charter, I would add a conflict resolution process. When the hosting constraint forced our architecture pivot from Spring Boot to Supabase in early August, the decision happened informally in a WhatsApp chat. A formal escalation path in our charter would have made that decision more structured and better documented.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Samukelisiwe Maphumulo &nbsp;|&nbsp; 219344639 &nbsp;|&nbsp; PRP370S — Project Presentation 3 &nbsp;|&nbsp; CPUT 2026</p>
+  </footer>
+
+</body>
+</html>

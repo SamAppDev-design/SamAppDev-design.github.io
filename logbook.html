@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agile Logbook | GoShuttle Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand"><div class="nav-logo">GS</div><span>GoShuttle Portfolio</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="charter.html">Charter</a>
+      <a href="userstories.html">User Stories</a>
+      <a href="backlog.html">Product Backlog</a>
+      <a href="sprint.html">Sprint Backlog</a>
+      <a href="logbook.html" class="active">Logbook</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <h1>05 — Agile Logbook</h1>
+    <p>A running record of our daily standups, sprint planning sessions, key decisions and retrospectives throughout the GoShuttle build.</p>
+    <div class="meta">
+      <span class="badge purple">Evidence</span>
+      <span class="badge purple">Reflection</span>
+      <span class="badge teal">August – October 2026</span>
+      <span class="badge amber">Samukelisiwe Maphumulo | 219344639</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+
+      <div class="block-title">
+        <div class="dot" style="background:var(--purple)"></div>
+        Evidence — GoShuttle Agile Logbook
+      </div>
+
+      <div class="evidence-block">
+
+        <!-- Sprint Planning Banner -->
+        <div style="background:rgba(29,184,164,.08); border:1px solid rgba(29,184,164,.2); border-radius:12px; padding:16px 20px; margin-bottom:28px;">
+          <div style="font-size:11px; color:var(--teal); font-weight:700; text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px;">Daily Standup Format (agreed in Team Charter)</div>
+          <p style="font-size:13px; color:var(--text-sec);">1. What did I complete yesterday? &nbsp;|&nbsp; 2. What will I work on today? &nbsp;|&nbsp; 3. Any blockers or dependencies?</p>
+        </div>
+
+        <!-- SPRINT PLANNING -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:18px;">Sprint 2 — Planning Session (1 August 2026)</h4>
+        <div style="background:var(--navy-mid); border-radius:12px; padding:20px; margin-bottom:28px;">
+          <table class="data-table">
+            <thead>
+              <tr><th>Agenda Item</th><th>Decision / Outcome</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sprint Goal</td><td>Implement all 8 ERD entities; resolve hosting constraint; deliver registration → live tracking path</td></tr>
+              <tr><td>Architecture Decision</td><td>GitHub Pages cannot run a Java backend. Team agrees to pivot from Spring Boot + MySQL to Supabase (PostgreSQL) + Vue.js frontend</td></tr>
+              <tr><td>Package Ordering</td><td>Package 1 (Campus/User) must finish before Package 2 can start; Package 2 before Package 3; Package 3 before Package 4 can finalise integration</td></tr>
+              <tr><td>Trello Setup</td><td>Samukelisiwe creates Sprint 2 board with columns: To Do / In Progress / Blocked / Done. All 20 tasks added before coding begins.</td></tr>
+              <tr><td>Communication</td><td>WhatsApp group for daily standups; Supabase schema changes announced in group before being applied</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- DAILY STANDUPS -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:18px;">Daily Standup Log — August 2026</h4>
+
+        <div class="log-entry">
+          <div class="log-date">1–5 August 2026 | Architecture Week</div>
+          <div class="log-title">Sprint 2 Kickoff — Architecture Decision &amp; Campus Foundation</div>
+          <div class="log-body">
+            <strong>Samukelisiwe:</strong> Confirmed GitHub Pages hosting limitation with the team. Led group discussion on backend alternatives. Team agreed to Supabase. Created Campus table on Supabase and seeded all 5 CPUT campuses (Bellville, Cape Town, District Six, Mowbray, Wellington). Trello board set up with all 20 sprint tasks.<br><br>
+            <strong>Blocker resolved:</strong> Team almost started Spring Boot development before realising it cannot be hosted on GitHub Pages. Early discovery saved at least 2 weeks of wasted work.
+          </div>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-date">6–10 August 2026 | Package 1</div>
+          <div class="log-title">User Table, Registration Flow &amp; FK Fix</div>
+          <div class="log-body">
+            <strong>Samukelisiwe:</strong> Designed User table linking to auth.users; simplified to prototype model. Built RegisterView.vue with form validation and Supabase insert. Discovered campus_id FK mismatch — select component was sending string value but DB expected numeric bigint. Fixed by explicit type conversion in the insert payload.<br><br>
+            <strong>Blocker raised:</strong> UUID vs bigint type conflict in Row Level Security policies. Diagnosed, documented and resolved with explicit casting. Plaintext password trade-off documented as known limitation.<br><br>
+            <strong>Package 1 status:</strong> ✅ Complete — Package 2 can begin.
+          </div>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-date">11–15 August 2026 | Package 2</div>
+          <div class="log-title">Routes, Stops &amp; Scheduling (Sinethemba)</div>
+          <div class="log-body">
+            <strong>Sinethemba:</strong> Created Route table after Campus was confirmed live. Seeded G1 (Khayelitsha → Bellville), G2 (Mitchells Plain → CT), G3 (Kraaifontein → Bellville). Created Stop table with SequenceOrder and OffsetMinutes. Confirmed DepartureTime seeding approach in team standup before proceeding.<br><br>
+            <strong>Samukelisiwe (Team Leader check-in):</strong> Verified all Route records have valid DestinationCampusID FK values matching the Campus table. Confirmed with Mvuyisi that Stop data was ready for LiveTrip FK references.<br><br>
+            <strong>Package 2 status:</strong> ✅ Complete — Package 3 can begin.
+          </div>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-date">16–20 August 2026 | Package 3 (Part 1)</div>
+          <div class="log-title">Bus, Driver &amp; LiveTrip Tables (Mvuyisi)</div>
+          <div class="log-body">
+            <strong>Mvuyisi:</strong> Created Bus table (BusNumber, RouteID FK, DriverID FK, Capacity, CapacityPercent) and Driver table. Attempted LiveTrip upsert — hit NOT NULL constraint on route_id and missing lat/lng/updated_at columns. Iteratively refined schema: added columns, added unique constraint on bus_id to support upsert operations.<br><br>
+            <strong>Key learning flagged in standup:</strong> Schema gaps should be caught in design review before table creation, not during upsert testing. Action: Sprint 3 will include a schema design checklist.
+          </div>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-date">21–25 August 2026 | Package 3 (Part 2) + Package 4 start</div>
+          <div class="log-title">DriverTrack.vue, TrackView.vue Leaflet Map &amp; Pass Table</div>
+          <div class="log-body">
+            <strong>Mvuyisi:</strong> Built DriverTrack.vue with dual input paths — navigator.geolocation.watchPosition for real GPS and manual coordinate form for demo environments where GPS permissions are unreliable. Updated TrackView.vue with Leaflet map that polls Supabase every 10 seconds and draws route line between stops.<br><br>
+            <strong>Kwanda:</strong> Began Package 4 — created Pass table with UserID and PreferredRouteID foreign keys. Started PassService for DaysLeft, TripsUsed and AmountSaved metrics.<br><br>
+            <strong>Team standup highlight:</strong> First time all 4 packages had active development simultaneously. Team morale was high — the live map was working and showing the bus moving on screen.
+          </div>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-date">26–31 August 2026 | Integration &amp; Sprint Close</div>
+          <div class="log-title">Cross-Package Integration, Seed Consistency &amp; Sprint Retrospective</div>
+          <div class="log-body">
+            <strong>Kwanda:</strong> Ran cross-package relationship verification — confirmed all FK chains resolve correctly: Pass → User → Campus; Pass → Route → Stop; LiveTrip → Bus → Driver. Seed data consistency check passed. Documented known limitations list and scaffolded README.<br><br>
+            <strong>Samukelisiwe (Sprint Close):</strong> Confirmed registration → live tracking path is demo-ready end-to-end. Closed all completed Trello cards. Sprint velocity: 61 of 63 planned story points delivered (95%).<br><br>
+            <strong>Known limitations documented:</strong> Hardcoded map origin coordinates; illustrative fares (not real); plaintext password storage in prototype.
+          </div>
+        </div>
+
+        <!-- RETROSPECTIVE -->
+        <h4 style="color:var(--purple); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin: 28px 0 16px;">Sprint 2 Retrospective (31 August 2026)</h4>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:14px; margin-bottom:28px;">
+          <div style="background:rgba(34,197,94,.08); border:1px solid rgba(34,197,94,.2); border-radius:12px; padding:18px;">
+            <div style="font-size:11px; color:var(--green); font-weight:700; text-transform:uppercase; margin-bottom:10px;">✅ What Went Well</div>
+            <ul style="font-size:13px; color:var(--text-sec); list-style:none; display:flex; flex-direction:column; gap:8px;">
+              <li>• Package ordering prevented all downstream blockages</li>
+              <li>• Architecture pivot was decided early — no wasted Spring Boot work</li>
+              <li>• Dual GPS/manual input made DriverTrack.vue demo-proof</li>
+              <li>• All 8 ERD entities live on Supabase within the sprint</li>
+              <li>• Cross-package FK chain verified end-to-end</li>
+            </ul>
+          </div>
+          <div style="background:rgba(232,160,32,.08); border:1px solid rgba(232,160,32,.2); border-radius:12px; padding:18px;">
+            <div style="font-size:11px; color:var(--amber); font-weight:700; text-transform:uppercase; margin-bottom:10px;">⚠️ What To Improve</div>
+            <ul style="font-size:13px; color:var(--text-sec); list-style:none; display:flex; flex-direction:column; gap:8px;">
+              <li>• PassService under-estimated (4pts should be 6pts)</li>
+              <li>• Schema type mismatches should be caught at design time</li>
+              <li>• No formal conflict resolution process in Team Charter</li>
+              <li>• LiveTrip schema gaps found during testing, not design</li>
+            </ul>
+          </div>
+          <div style="background:rgba(59,130,246,.08); border:1px solid rgba(59,130,246,.2); border-radius:12px; padding:18px;">
+            <div style="font-size:11px; color:var(--blue); font-weight:700; text-transform:uppercase; margin-bottom:10px;">→ Action Items for Sprint 3</div>
+            <ul style="font-size:13px; color:var(--text-sec); list-style:none; display:flex; flex-direction:column; gap:8px;">
+              <li>• Add schema design checklist before any table is created</li>
+              <li>• Re-estimate PassService as Sprint 3 priority item</li>
+              <li>• Add conflict escalation path to Team Charter</li>
+              <li>• Dynamic map origin from Route/Stop tables</li>
+              <li>• Secure authentication (password hashing)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- September Sprint Planning Preview -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:14px;">Sprint 3 Planning Preview (September 2026)</h4>
+        <table class="data-table">
+          <thead>
+            <tr><th>Priority</th><th>Focus Area</th><th>Owner</th><th>Sprint 3 Goal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-high">High</td><td>Dynamic map origin</td><td>Mvuyisi</td><td>Replace hardcoded coordinates with Route + Stop table data</td></tr>
+            <tr><td class="p-high">High</td><td>Secure Auth</td><td>Samukelisiwe</td><td>Implement password hashing or proper Supabase Auth protection</td></tr>
+            <tr><td class="p-high">High</td><td>Pass purchase &amp; renewal</td><td>Kwanda</td><td>Complete full pass flow including PreferredRoute selection</td></tr>
+            <tr><td class="p-med">Medium</td><td>Student feedback sessions</td><td>All</td><td>Run structured user testing on registration + tracking flow</td></tr>
+            <tr><td class="p-med">Medium</td><td>Campus activation</td><td>Kwanda</td><td>Social media posts and campus presence with working prototype</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="block-title" style="margin-top:40px;">
+        <div class="dot" style="background:var(--purple)"></div>
+        Reflection — What I Learned from Keeping the Agile Logbook
+      </div>
+
+      <div class="reflection-block">
+        <div class="reflection-text">
+          <p>Keeping the Agile logbook was the artefact I resisted most at the start of this project. It felt like writing a diary about code, which seemed unnecessary when the code itself was the evidence of progress. By the end of Sprint 2, I had completely reversed that view. <strong>The logbook became the most honest artefact we produced</strong> — not because it recorded our successes, but because it recorded our blockers, our decisions, and the moments when we had to change direction.</p>
+          <p>The entry for 6–10 August captures something that no other artefact shows: the fact that the campus_id FK mismatch caused a silent insert failure. Without the logbook, that problem — its diagnosis, its fix and its root cause — would have been lost. <strong>When Kwanda ran cross-package integration tests at the end of the sprint, he checked the logbook to understand what type casting had been applied to campus_id,</strong> which saved him from repeating the same investigation independently.</p>
+          <p>The retrospective section of the logbook was the most valuable for my development as a team leader. Writing "PassService was under-estimated" forces me to ask why — and the answer (that tasks spanning backend logic and frontend display are always underestimated) became a rule I will apply to every future sprint estimation. <strong>Retrospectives without a written record are just conversations that are forgotten; written retrospectives become institutional knowledge.</strong></p>
+          <p>If I could improve our logbook, I would write standup entries daily rather than weekly. The weekly summaries lose granular details — on 18 August, for example, Mvuyisi found and fixed the LiveTrip NOT NULL constraint, but the exact error message and solution were not captured because the standup was summarised rather than logged in real time. In future projects I will use a simple shared Google Doc for daily standup entries, then transfer summaries to the formal logbook weekly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Samukelisiwe Maphumulo &nbsp;|&nbsp; 219344639 &nbsp;|&nbsp; PRP370S — Project Presentation 3 &nbsp;|&nbsp; CPUT 2026</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sprint Backlog | GoShuttle Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand"><div class="nav-logo">GS</div><span>GoShuttle Portfolio</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="charter.html">Charter</a>
+      <a href="userstories.html">User Stories</a>
+      <a href="backlog.html">Product Backlog</a>
+      <a href="sprint.html" class="active">Sprint Backlog</a>
+      <a href="logbook.html">Logbook</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <h1>04 — Sprint Backlog</h1>
+    <p>The specific tasks our team committed to in Sprint 2 (August 2026) — the ERD-driven implementation sprint that took GoShuttle from UI prototype to data-backed application.</p>
+    <div class="meta">
+      <span class="badge green">Evidence</span>
+      <span class="badge green">Reflection</span>
+      <span class="badge teal">Sprint 2 — August 2026</span>
+      <span class="badge amber">Samukelisiwe Maphumulo | 219344639</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+
+      <div class="block-title">
+        <div class="dot" style="background:var(--green)"></div>
+        Evidence — Sprint 2 Backlog (1–31 August 2026)
+      </div>
+
+      <div class="evidence-block">
+
+        <!-- Sprint goal -->
+        <div style="background:var(--navy-mid); border-left:3px solid var(--teal); border-radius:10px; padding:16px 20px; margin-bottom:24px;">
+          <div style="font-size:11px; color:var(--teal); font-weight:700; text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px;">Sprint Goal</div>
+          <p style="font-size:14px; font-weight:600;">Implement all 8 ERD entities on Supabase, resolve the hosting architecture constraint, and deliver a working end-to-end path from student registration to live bus tracking.</p>
+        </div>
+
+        <!-- Sprint info row -->
+        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+          <div style="background:var(--navy-mid); border-radius:10px; padding:12px 18px; text-align:center; min-width:110px;">
+            <div style="font-size:18px; font-weight:800; color:var(--teal);">31</div>
+            <div style="font-size:11px; color:var(--text-muted);">Sprint Days</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:12px 18px; text-align:center; min-width:110px;">
+            <div style="font-size:18px; font-weight:800; color:var(--amber);">4</div>
+            <div style="font-size:11px; color:var(--text-muted);">Packages</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:12px 18px; text-align:center; min-width:110px;">
+            <div style="font-size:18px; font-weight:800; color:var(--green);">8</div>
+            <div style="font-size:11px; color:var(--text-muted);">Entities Live</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:12px 18px; text-align:center; min-width:110px;">
+            <div style="font-size:18px; font-weight:800; color:var(--blue);">61</div>
+            <div style="font-size:11px; color:var(--text-muted);">Story Points</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:12px 18px; text-align:center; min-width:110px;">
+            <div style="font-size:18px; font-weight:800; color:var(--purple);">95%</div>
+            <div style="font-size:11px; color:var(--text-muted);">Completion</div>
+          </div>
+        </div>
+
+        <!-- Package 1 -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:12px;">📦 Package 1 — Campus &amp; User (Samukelisiwe)</h4>
+        <table class="data-table" style="margin-bottom:24px;">
+          <thead>
+            <tr><th>Task ID</th><th>Task Description</th><th>Owner</th><th>Points</th><th>Status</th><th>Dates</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>T-01</td><td>Explore Spring Boot setup; confirm GitHub Pages hosting constraint; decide to pivot to Supabase</td><td>Samukelisiwe</td><td>3</td><td class="p-done">✓ Done</td><td>1–5 Aug</td></tr>
+            <tr><td>T-02</td><td>Create Campus table on Supabase; seed 5 CPUT campuses with correct names</td><td>Samukelisiwe</td><td>2</td><td class="p-done">✓ Done</td><td>1–5 Aug</td></tr>
+            <tr><td>T-03</td><td>Design User table; link to auth.users; simplify to prototype model</td><td>Samukelisiwe</td><td>3</td><td class="p-done">✓ Done</td><td>6–10 Aug</td></tr>
+            <tr><td>T-04</td><td>Build RegisterView.vue — form layout, input validation, Supabase insert on submit</td><td>Samukelisiwe</td><td>5</td><td class="p-done">✓ Done</td><td>6–10 Aug</td></tr>
+            <tr><td>T-05</td><td>Diagnose and fix campus_id FK type mismatch between select value and numeric FK</td><td>Samukelisiwe</td><td>2</td><td class="p-done">✓ Done</td><td>6–10 Aug</td></tr>
+            <tr><td>T-06</td><td>Resolve UUID vs bigint type mismatch in RLS policies; document plaintext password trade-off</td><td>Samukelisiwe</td><td>2</td><td class="p-done">✓ Done</td><td>6–10 Aug</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Package 2 -->
+        <h4 style="color:var(--blue); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:12px;">📦 Package 2 — Routes &amp; Stops (Sinethemba)</h4>
+        <table class="data-table" style="margin-bottom:24px;">
+          <thead>
+            <tr><th>Task ID</th><th>Task Description</th><th>Owner</th><th>Points</th><th>Status</th><th>Dates</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>T-07</td><td>Create Route table with RouteCode, OriginArea, DestinationCampusID, TotalStops, EstimatedDuration, FrequencyMinutes</td><td>Sinethemba</td><td>3</td><td class="p-done">✓ Done</td><td>11–15 Aug</td></tr>
+            <tr><td>T-08</td><td>Seed G1 (Khayelitsha), G2 (Mitchells Plain), G3 (Kraaifontein) routes with correct campus FK</td><td>Sinethemba</td><td>2</td><td class="p-done">✓ Done</td><td>11–15 Aug</td></tr>
+            <tr><td>T-09</td><td>Create Stop table with SequenceOrder, OffsetMinutes, IsCampusStop; seed ordered stops for all 3 routes</td><td>Sinethemba</td><td>4</td><td class="p-done">✓ Done</td><td>11–15 Aug</td></tr>
+            <tr><td>T-10</td><td>Create Schedule/Departure table; confirm DepartureTime seeding approach with team</td><td>Sinethemba</td><td>3</td><td class="p-done">✓ Done</td><td>11–15 Aug</td></tr>
+            <tr><td>T-11</td><td>Expose route and stop lookup data as Supabase queries for frontend route-selector and LiveTrip FKs</td><td>Sinethemba</td><td>2</td><td class="p-done">✓ Done</td><td>11–15 Aug</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Package 3 -->
+        <h4 style="color:var(--amber); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:12px;">📦 Package 3 — Fleet &amp; LiveTrip (Mvuyisi)</h4>
+        <table class="data-table" style="margin-bottom:24px;">
+          <thead>
+            <tr><th>Task ID</th><th>Task Description</th><th>Owner</th><th>Points</th><th>Status</th><th>Dates</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>T-12</td><td>Create Bus table (BusNumber, RouteID FK, DriverID FK, Capacity, CapacityPercent) and Driver table</td><td>Mvuyisi</td><td>3</td><td class="p-done">✓ Done</td><td>16–20 Aug</td></tr>
+            <tr><td>T-13</td><td>Create LiveTrip table; fix schema by adding latitude, longitude, updated_at; add unique bus_id constraint for upsert</td><td>Mvuyisi</td><td>4</td><td class="p-done">✓ Done</td><td>16–20 Aug</td></tr>
+            <tr><td>T-14</td><td>Build DriverTrack.vue — GPS watchPosition for live location + manual coordinate form as demo fallback</td><td>Mvuyisi</td><td>5</td><td class="p-done">✓ Done</td><td>16–20 Aug</td></tr>
+            <tr><td>T-15</td><td>Build TrackView.vue — Leaflet map integration, Supabase poll every 10 seconds, route line drawing, bus icon positioning</td><td>Mvuyisi</td><td>6</td><td class="p-done">✓ Done</td><td>21–25 Aug</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Package 4 -->
+        <h4 style="color:var(--purple); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:12px;">📦 Package 4 — Pass &amp; Integration (Kwanda)</h4>
+        <table class="data-table" style="margin-bottom:24px;">
+          <thead>
+            <tr><th>Task ID</th><th>Task Description</th><th>Owner</th><th>Points</th><th>Status</th><th>Dates</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>T-16</td><td>Create Pass table with UserID FK, PreferredRouteID FK, PassType, ValidUntil, DaysLeft, TripsUsed, AmountSaved</td><td>Kwanda</td><td>3</td><td class="p-done">✓ Done</td><td>21–25 Aug</td></tr>
+            <tr><td>T-17</td><td>Build PassService — DaysLeft, TripsUsed, AmountSaved endpoints for My Pass page</td><td>Kwanda</td><td>4</td><td class="p-prog">⟳ In Progress</td><td>21–31 Aug</td></tr>
+            <tr><td>T-18</td><td>Cross-package relationship verification — confirm all FKs resolve across Campus, User, Route, Stop, Bus, Driver, LiveTrip, Pass</td><td>Kwanda</td><td>3</td><td class="p-done">✓ Done</td><td>26–31 Aug</td></tr>
+            <tr><td>T-19</td><td>Seed data consistency check — verify all referential integrity across tables</td><td>Kwanda</td><td>2</td><td class="p-done">✓ Done</td><td>26–31 Aug</td></tr>
+            <tr><td>T-20</td><td>Document known limitations (hardcoded map origin, illustrative fares, plaintext passwords) and scaffold README</td><td>Kwanda</td><td>2</td><td class="p-done">✓ Done</td><td>26–31 Aug</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Sprint Retrospective -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:14px;">Sprint 2 Retrospective Summary</h4>
+        <table class="data-table">
+          <thead>
+            <tr><th>Category</th><th>Item</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="color:var(--green);">✅ Went Well</td><td>Package ordering worked perfectly — no downstream blockages. All 8 ERD entities delivered on time. Registration → live tracking path is demo-ready.</td></tr>
+            <tr><td style="color:var(--green);">✅ Went Well</td><td>Architecture pivot (Spring Boot → Supabase) was decided early, saving weeks of wasted development on an undeployable backend.</td></tr>
+            <tr><td style="color:var(--green);">✅ Went Well</td><td>Dual GPS + manual input on DriverTrack.vue was a smart design decision — made the feature demonstrable in any environment.</td></tr>
+            <tr><td style="color:var(--amber);">⚠️ Improve</td><td>PassService (T-17) was not completed within the sprint. Should have been estimated at 6 points, not 4.</td></tr>
+            <tr><td style="color:var(--amber);">⚠️ Improve</td><td>Schema type mismatches (UUID vs bigint) should be caught in table design review before seeding — not after insert failures.</td></tr>
+            <tr><td style="color:var(--blue);">→ Action</td><td>Sprint 3 will open with a schema design review checklist before any table is created on Supabase.</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="block-title" style="margin-top:40px;">
+        <div class="dot" style="background:var(--green)"></div>
+        Reflection — What I Learned from the Sprint Backlog
+      </div>
+
+      <div class="reflection-block">
+        <div class="reflection-text">
+          <p>Sprint 2 was the most intense and most educational sprint of the GoShuttle project. The sprint backlog made the abstract feel concrete — instead of "we are building a shuttle app," we had 20 specific tasks, each with an owner, an estimate and a deadline window. <strong>The backlog turned a month of work into a set of daily decisions.</strong></p>
+          <p>As Team Leader, I learned that my job during the sprint was not to do all the work — it was to unblock my team. When Mvuyisi could not start Package 3 until Sinethemba's Route table was seeded (T-07 through T-11), I tracked that dependency daily. The moment T-11 was done, I notified Mvuyisi immediately so he could start T-12 the same day. <strong>This "dependency tracking" role is something I had never considered part of leadership before this sprint.</strong></p>
+          <p>The sprint retrospective revealed our estimation blind spot. T-17 (PassService) was estimated at 4 points but clearly needed 6. Going forward, I will apply the Agile rule of thumb: <strong>if a task involves both backend logic and frontend display, add 2 points to whatever you first estimate.</strong> The cognitive overhead of connecting two layers is always underestimated.</p>
+          <p>Most importantly, Sprint 2 showed me what "done" really means in Agile. T-14 (TrackView.vue) was not done when the map appeared on screen — it was done when it polled Supabase every 10 seconds, drew the route line, and positioned the bus icon correctly. <strong>A task is done when it meets the acceptance criteria of its user story, not when the developer thinks it looks finished.</strong> That distinction will shape how I define completion on every future project.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Samukelisiwe Maphumulo &nbsp;|&nbsp; 219344639 &nbsp;|&nbsp; PRP370S — Project Presentation 3 &nbsp;|&nbsp; CPUT 2026</p>
+  </footer>
+</body>
+</html>

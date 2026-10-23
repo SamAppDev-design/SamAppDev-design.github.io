@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Backlog | GoShuttle Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand"><div class="nav-logo">GS</div><span>GoShuttle Portfolio</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="charter.html">Charter</a>
+      <a href="userstories.html">User Stories</a>
+      <a href="backlog.html" class="active">Product Backlog</a>
+      <a href="sprint.html">Sprint Backlog</a>
+      <a href="logbook.html">Logbook</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <h1>03 — Product Backlog</h1>
+    <p>The complete prioritised list of all GoShuttle features, technical tasks and improvements ordered by business value and sprint readiness.</p>
+    <div class="meta">
+      <span class="badge blue">Evidence</span>
+      <span class="badge blue">Reflection</span>
+      <span class="badge teal">PRP370S</span>
+      <span class="badge amber">Samukelisiwe Maphumulo | 219344639</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+
+      <div class="block-title">
+        <div class="dot" style="background:var(--blue)"></div>
+        Evidence — GoShuttle Product Backlog
+      </div>
+
+      <div class="evidence-block">
+
+        <div style="display:flex; gap:16px; margin-bottom:20px; flex-wrap:wrap;">
+          <span style="font-size:13px; color:var(--text-sec);">Priority key:</span>
+          <span class="p-high">● High</span>
+          <span class="p-med">● Medium</span>
+          <span class="p-low">● Low</span>
+          &nbsp;|&nbsp;
+          <span class="p-done">✓ Done</span>
+          <span class="p-prog">⟳ In Progress</span>
+          <span class="p-todo">○ To Do</span>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User Story / Feature</th>
+              <th>Package</th>
+              <th>Priority</th>
+              <th>Effort (pts)</th>
+              <th>Status</th>
+              <th>Sprint</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PB-01</td>
+              <td>Architecture decision — hosting platform selection</td>
+              <td>Infrastructure</td>
+              <td class="p-high">High</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 1</td>
+            </tr>
+            <tr>
+              <td>PB-02</td>
+              <td>Campus table — create &amp; seed 5 CPUT campuses on Supabase</td>
+              <td>Package 1</td>
+              <td class="p-high">High</td>
+              <td>2</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 1</td>
+            </tr>
+            <tr>
+              <td>PB-03</td>
+              <td>User table — design, link to auth.users, simplified prototype model</td>
+              <td>Package 1</td>
+              <td class="p-high">High</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 1</td>
+            </tr>
+            <tr>
+              <td>PB-04</td>
+              <td>RegisterView.vue — student registration form with validation &amp; Supabase insert</td>
+              <td>Package 1</td>
+              <td class="p-high">High</td>
+              <td>5</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 1</td>
+            </tr>
+            <tr>
+              <td>PB-05</td>
+              <td>Fix campus_id FK type mismatch (select value vs numeric FK)</td>
+              <td>Package 1</td>
+              <td class="p-high">High</td>
+              <td>2</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 1</td>
+            </tr>
+            <tr>
+              <td>PB-06</td>
+              <td>Route table — create with RouteCode, OriginArea, DestinationCampusID, Frequency</td>
+              <td>Package 2</td>
+              <td class="p-high">High</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-07</td>
+              <td>Seed routes G1 (Khayelitsha), G2 (Mitchells Plain), G3 (Kraaifontein)</td>
+              <td>Package 2</td>
+              <td class="p-high">High</td>
+              <td>2</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-08</td>
+              <td>Stop table — SequenceOrder, OffsetMinutes, IsCampusStop; seed ordered stops</td>
+              <td>Package 2</td>
+              <td class="p-high">High</td>
+              <td>4</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-09</td>
+              <td>Schedule/Departure table — DepartureTime, Status (On Time / Delayed)</td>
+              <td>Package 2</td>
+              <td class="p-med">Medium</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-10</td>
+              <td>Route-selector UI component — display routes fetched from Supabase</td>
+              <td>Package 2</td>
+              <td class="p-high">High</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-11</td>
+              <td>Driver table — DriverName; Bus table — BusNumber, RouteID, DriverID, Capacity</td>
+              <td>Package 3</td>
+              <td class="p-high">High</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-12</td>
+              <td>LiveTrip table — lat/lng, updated_at, unique bus_id constraint for upsert</td>
+              <td>Package 3</td>
+              <td class="p-high">High</td>
+              <td>4</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-13</td>
+              <td>DriverTrack.vue — GPS watchPosition + manual coordinate fallback</td>
+              <td>Package 3</td>
+              <td class="p-high">High</td>
+              <td>5</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-14</td>
+              <td>TrackView.vue — Leaflet map with 10s Supabase polling &amp; route line</td>
+              <td>Package 3</td>
+              <td class="p-high">High</td>
+              <td>6</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-15</td>
+              <td>Pass table — UserID, PreferredRouteID FKs, TripsUsed, AmountSaved, ValidUntil</td>
+              <td>Package 4</td>
+              <td class="p-high">High</td>
+              <td>3</td>
+              <td class="p-done">✓ Done</td>
+              <td>Sprint 2</td>
+            </tr>
+            <tr>
+              <td>PB-16</td>
+              <td>PassService — DaysLeft, TripsUsed, AmountSaved metrics for My Pass page</td>
+              <td>Package 4</td>
+              <td class="p-high">High</td>
+              <td>4</td>
+              <td class="p-prog">⟳ In Progress</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-17</td>
+              <td>Dynamic map origin — replace hardcoded lat/lng with Route &amp; Stop table data</td>
+              <td>Package 3</td>
+              <td class="p-high">High</td>
+              <td>4</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-18</td>
+              <td>Secure authentication — password hashing / proper Supabase Auth protection</td>
+              <td>Package 1</td>
+              <td class="p-high">High</td>
+              <td>5</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-19</td>
+              <td>Pass purchase &amp; renewal flow — end-to-end with PreferredRoute selection</td>
+              <td>Package 4</td>
+              <td class="p-med">Medium</td>
+              <td>5</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-20</td>
+              <td>Student feedback sessions — UI/UX improvements from real user testing</td>
+              <td>UX</td>
+              <td class="p-med">Medium</td>
+              <td>4</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-21</td>
+              <td>Cross-package integration tests — relationship verification &amp; seed consistency</td>
+              <td>Package 4</td>
+              <td class="p-med">Medium</td>
+              <td>3</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-22</td>
+              <td>Campus social media campaign — TikTok/Instagram content using working prototype</td>
+              <td>Marketing</td>
+              <td class="p-low">Low</td>
+              <td>2</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Sprint 3</td>
+            </tr>
+            <tr>
+              <td>PB-23</td>
+              <td>Real fare API integration — replace illustrative fares with live pricing</td>
+              <td>Package 4</td>
+              <td class="p-low">Low</td>
+              <td>6</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Future</td>
+            </tr>
+            <tr>
+              <td>PB-24</td>
+              <td>Push notifications — alert students when bus is 5 minutes away</td>
+              <td>Package 3</td>
+              <td class="p-low">Low</td>
+              <td>7</td>
+              <td class="p-todo">○ To Do</td>
+              <td>Future</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:20px; display:flex; gap:24px; flex-wrap:wrap;">
+          <div style="background:var(--navy-mid); border-radius:10px; padding:14px 20px; text-align:center;">
+            <div style="font-size:22px; font-weight:800; color:var(--teal);">15</div>
+            <div style="font-size:11px; color:var(--text-muted);">Items Done</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:14px 20px; text-align:center;">
+            <div style="font-size:22px; font-weight:800; color:var(--blue);">1</div>
+            <div style="font-size:11px; color:var(--text-muted);">In Progress</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:14px 20px; text-align:center;">
+            <div style="font-size:22px; font-weight:800; color:var(--amber);">8</div>
+            <div style="font-size:11px; color:var(--text-muted);">To Do</div>
+          </div>
+          <div style="background:var(--navy-mid); border-radius:10px; padding:14px 20px; text-align:center;">
+            <div style="font-size:22px; font-weight:800; color:var(--text-sec);">84</div>
+            <div style="font-size:11px; color:var(--text-muted);">Total Story Points</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="block-title" style="margin-top:40px;">
+        <div class="dot" style="background:var(--blue)"></div>
+        Reflection — What I Learned from Managing the Product Backlog
+      </div>
+
+      <div class="reflection-block">
+        <div class="reflection-text">
+          <p>Managing the GoShuttle product backlog taught me that prioritisation is a skill, not just a sorting exercise. In the beginning I listed everything I thought GoShuttle should eventually do — including push notifications and real fare APIs — and marked them all as high priority. <strong>The backlog was overwhelming and the team did not know where to start.</strong></p>
+          <p>The turning point was when I applied the principle that the backlog should be ordered by what unblocks the rest of the team. PB-02 (Campus table) and PB-03 (User table) had to be done first not because they were the most impressive features, but because every other package needed them as foreign keys. <strong>This "dependency-first" thinking became our ordering logic</strong>, and it is something that directly maps to the Agile concept of a "ready" backlog item — one that has no unresolved dependencies.</p>
+          <p>I also learned the difference between a product backlog and a wishlist. Items like PB-23 (real fare API) and PB-24 (push notifications) are legitimate future goals, but marking them as "Future" sprint items rather than "Sprint 3" kept the team focused on what could actually be built and tested within the module timeframe. <strong>A backlog that is honest about scope builds team confidence; one that is overloaded creates anxiety.</strong></p>
+          <p>Story points were new to me in this project. Estimating effort in points rather than hours felt strange at first, but it helped us compare tasks relatively — PB-14 (TrackView.vue with Leaflet) at 6 points clearly needed more time than PB-02 (Campus table) at 2 points, without us having to commit to a specific number of hours. I will use story points on all future Agile projects.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Samukelisiwe Maphumulo &nbsp;|&nbsp; 219344639 &nbsp;|&nbsp; PRP370S — Project Presentation 3 &nbsp;|&nbsp; CPUT 2026</p>
+  </footer>
+</body>
+</html>

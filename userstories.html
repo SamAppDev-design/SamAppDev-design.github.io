@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Stories & Tasks | GoShuttle Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand"><div class="nav-logo">GS</div><span>GoShuttle Portfolio</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="charter.html">Charter</a>
+      <a href="userstories.html" class="active">User Stories</a>
+      <a href="backlog.html">Product Backlog</a>
+      <a href="sprint.html">Sprint Backlog</a>
+      <a href="logbook.html">Logbook</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <h1>02 — User Stories &amp; Tasks</h1>
+    <p>GoShuttle features written from the student and driver perspective, broken down into concrete development tasks per sprint.</p>
+    <div class="meta">
+      <span class="badge amber">Evidence</span>
+      <span class="badge amber">Reflection</span>
+      <span class="badge blue">PRP370S</span>
+      <span class="badge teal">Samukelisiwe Maphumulo | 219344639</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+
+      <div class="block-title">
+        <div class="dot" style="background:var(--amber)"></div>
+        Evidence — GoShuttle User Stories &amp; Tasks
+      </div>
+
+      <div class="evidence-block">
+        <p style="font-size:13px; color:var(--text-sec); margin-bottom:24px;">
+          Each story follows the format: <em>"As a [user], I want to [action] so that [benefit]."</em>
+          Stories are grouped by persona and linked to ERD packages and sprint assignments.
+        </p>
+
+        <!-- STUDENT STORIES -->
+        <h4 style="color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:16px;">👤 Persona: CPUT Commuter Student</h4>
+
+        <div class="story-card">
+          <div class="story-id">US-01 &nbsp;|&nbsp; Package 1 — Campus &amp; User &nbsp;|&nbsp; <span class="badge green">Done</span></div>
+          <div class="story-text">"As a CPUT student, I want to register an account with my student number and home campus so that I can access personalised shuttle information."</div>
+          <ul class="tasks">
+            <li>Create User table on Supabase with StudentNumber, Email, PasswordHash, CampusID (FK)</li>
+            <li>Build RegisterView.vue form with input validation (email format, student number length)</li>
+            <li>Insert new user record into Supabase on form submit</li>
+            <li>Fix campus_id FK mismatch between select value and numeric foreign key</li>
+            <li>Display success/error feedback message after registration attempt</li>
+          </ul>
+        </div>
+
+        <div class="story-card">
+          <div class="story-id">US-02 &nbsp;|&nbsp; Package 1 — Campus &amp; User &nbsp;|&nbsp; <span class="badge green">Done</span></div>
+          <div class="story-text">"As a CPUT student, I want to select my home campus during registration so that the app shows me only relevant routes."</div>
+          <ul class="tasks">
+            <li>Seed Campus table with 5 CPUT campuses (Bellville, Cape Town, District Six, Mowbray, Wellington)</li>
+            <li>Fetch campus list from Supabase and populate dropdown in RegisterView.vue</li>
+            <li>Store selected campus_id as FK on User record</li>
+          </ul>
+        </div>
+
+        <div class="story-card">
+          <div class="story-id">US-03 &nbsp;|&nbsp; Package 2 — Routes &amp; Stops &nbsp;|&nbsp; <span class="badge green">Done</span></div>
+          <div class="story-text">"As a CPUT student, I want to see all available shuttle routes so that I can choose the one closest to my home area."</div>
+          <ul class="tasks">
+            <li>Create Route table with RouteCode, OriginArea, DestinationCampusID, TotalStops, EstimatedDuration, FrequencyMinutes</li>
+            <li>Seed routes G1 (Khayelitsha), G2 (Mitchells Plain), G3 (Kraaifontein)</li>
+            <li>Build route-selector UI component that reads from Supabase</li>
+            <li>Display route cards with departure times and estimated journey duration</li>
+          </ul>
+        </div>
+
+        <div class="story-card">
+          <div class="story-id">US-04 &nbsp;|&nbsp; Package 2 — Routes &amp; Stops &nbsp;|&nbsp; <span class="badge green">Done</span></div>
+          <div class="story-text">"As a CPUT student, I want to see the ordered stops along my route so that I know where to wait and when the bus will arrive."</div>
+          <ul class="tasks">
+            <li>Create Stop table with RouteID (FK), StopName, AreaName, SequenceOrder, OffsetMinutes, IsCampusStop</li>
+            <li>Seed stops for G1, G2, G3 in correct SequenceOrder</li>
+            <li>Display stop timeline in the frontend using OffsetMinutes to calculate ETAs</li>
+            <li>Highlight campus stop with a distinct visual marker (IsCampusStop = true)</li>
+          </ul>
+        </div>
+
+        <div class="story-card">
+          <div class="story-id">US-05 &nbsp;|&nbsp; Package 3 — Fleet &amp; LiveTrip &nbsp;|&nbsp; <span class="badge green">Done</span></div>
+          <div class="story-text">"As a CPUT student, I want to see a live map showing where my bus is right now so that I know exactly when to leave my house."</div>
+          <ul class="tasks">
+            <li>Create LiveTrip table with BusID, RouteID, CurrentStopID, latitude, longitude, Status, ArrivesInMinutes, ToCampusMinutes, updated_at</li>
+            <li>Build TrackView.vue with Leaflet map integration</li>
+            <li>Poll Supabase for LiveTrip updates every 10 seconds</li>
+            <li>Draw route line on map using Stop coordinates</li>
+            <li>Show bus icon at current lat/lng position</li>
+          </ul>
+        </div>
+
+        <div class="story-card">
+          <div class="story-id">US-06 &nbsp;|&nbsp; Package 4 — Pass &amp; Integration &nbsp;|&nbsp; <span class="badge p-prog">In Progress</span></div>
+          <div class="story-text">"As a CPUT student, I want to view my shuttle pass details so that I know how many trips I have left and how much I have saved."</div>
+          <ul class="tasks">
+            <li>Create Pass table with UserID (FK), PassType, ValidUntil, DaysLeft, TripsUsed, AmountSaved, PreferredRouteID (FK)</li>
+            <li>Build PassService to calculate DaysLeft and AmountSaved dynamically</li>
+            <li>Build My Pass page displaying pass metrics in dashboard cards</li>
+            <li>Wire PreferredRoute selector to Pass table update</li>
+          </ul>
+        </div>
+
+        <!-- DRIVER STORIES -->
+        <h4 style="color:var(--amber); font-size:13px; text-transform:uppercase; letter-spacing:.5px; margin: 28px 0 16px;">🚌 Persona: GoShuttle Driver</h4>
+
+        <div class="story-card">
+          <div class="story-id">US-07 &nbsp;|&nbsp; Package 3 — Fleet &amp; LiveTrip &nbsp;|&nbsp; <span class="badge green">Done</span></div>
+          <div class="story-text">"As a GoShuttle driver, I want to share my GPS location so that students can see where my bus is in real time."</div>
+          <ul class="tasks">
+            <li>Create Driver table with DriverName; Bus table with BusNumber, RouteID (FK), DriverID (FK), Capacity, CapacityPercent</li>
+            <li>Build DriverTrack.vue with navigator.geolocation.watchPosition for live GPS tracking</li>
+            <li>Add manual coordinate entry form as fallback for unreliable GPS in demo environments</li>
+            <li>Upsert LiveTrip record on Supabase with latest lat/lng and updated_at on each GPS update</li>
+            <li>Add unique constraint on bus_id in live_trip table to support upsert operations</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="block-title" style="margin-top:40px;">
+        <div class="dot" style="background:var(--amber)"></div>
+        Reflection — What I Learned from Writing User Stories
+      </div>
+
+      <div class="reflection-block">
+        <div class="reflection-text">
+          <p>Writing user stories for GoShuttle fundamentally changed how I approached backend development. Before this project, I would start by designing database tables and then work outward. User stories forced me to start with the person — <strong>what does Thabo, the Khayelitsha student, actually need to do?</strong> — and then trace backwards to what the system must support.</p>
+          <p>The most valuable lesson came from US-01 (student registration). I wrote the story, listed the tasks, and only then discovered that the campus_id FK mismatch would cause a silent insert failure. <strong>Because the task was framed around a user outcome ("register successfully"), I noticed the failure during testing rather than assuming the insert worked.</strong> Without the user story lens, I might have declared the task done at the point of writing the insert query.</p>
+          <p>I also learned to write stories at the right level of granularity. My first draft of US-04 was: "As a student I want to see my route." That is too vague to test. After refining it to include the ordered stops and OffsetMinutes ETA, <strong>the acceptance criteria became testable</strong> — I could seed data and verify that Stop 1 appears before Stop 2 on the map. This precision saved hours of rework in mid-August.</p>
+          <p>Going forward, I plan to write user stories before writing a single line of code on all my personal projects, including OweMe. The discipline of thinking as the user first — even on solo projects — produces better, more purposeful software.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Samukelisiwe Maphumulo &nbsp;|&nbsp; 219344639 &nbsp;|&nbsp; PRP370S — Project Presentation 3 &nbsp;|&nbsp; CPUT 2026</p>
+  </footer>
+</body>
+</html>
